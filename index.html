@@ -1,68 +1,459 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Визитка | Анна Булавацкая</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root { --primary: #0d6efd; --bg: #f8f9fa; }
-    body { background-color: var(--bg); font-family: 'Segoe UI', sans-serif; transition: 0.3s; }
-    .card { border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: none; overflow: hidden; }
-    .header-bg { background: linear-gradient(135deg, #0d6efd, #0099ff); color: white; padding: 2rem; text-align: center; }
-    .profile-img { width: 120px; height: 120px; border-radius: 50%; border: 4px solid white; margin-top: -60px; object-fit: cover; }
-    .section-title { font-weight: bold; color: var(--primary); margin: 1.5rem 0 1rem; border-bottom: 2px solid #e9ecef; padding-bottom: 0.5rem; }
-    .exp-item { margin-bottom: 1rem; }
-    .badge-year { font-size: 0.8rem; background: #e9ecef; padding: 2px 8px; border-radius: 10px; }
-    /* Accessibility */
-    .vi-mode { background: #000 !important; color: #fff !important; }
-    .vi-mode .card { background: #222 !important; color: #fff !important; }
-    .vi-mode .text-muted { color: #ccc !important; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Булавацкая Анна Алексеевна | Резюме</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body{
+    background:#f0f2f5;
+    font-family:'Segoe UI',sans-serif;
+}
+
+.card{
+    border:none;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.header-bg{
+    height:160px;
+    background:linear-gradient(135deg,#0d6efd,#0099ff);
+}
+
+.profile-img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:5px solid #fff;
+    object-fit:cover;
+    margin-top:-70px;
+}
+
+.badge{
+    font-size:.8rem;
+}
+
+.contact-link{
+    text-decoration:none;
+}
+
+.contact-link:hover{
+    text-decoration:underline;
+}
+
+.accordion-button:not(.collapsed){
+    background:#e7f1ff;
+    color:#0d6efd;
+}
+
+.vi-mode{
+    background:#000 !important;
+    color:#fff !important;
+}
+
+.vi-mode .card,
+.vi-mode .accordion-item{
+    background:#111 !important;
+    color:#fff !important;
+}
+
+.vi-mode .accordion-button{
+    background:#222 !important;
+    color:#fff !important;
+}
+
+.vi-mode .text-muted{
+    color:#ccc !important;
+}
+
+.vi-mode .bg-light{
+    background:#1b1b1b !important;
+}
+
+ul{
+    padding-left:1.2rem;
+}
+</style>
 </head>
+
 <body>
 
-<div class="container py-5">
-  <div class="card mx-auto" style="max-width: 600px;">
-    <div class="header-bg"></div>
-    <div class="text-center px-4">
-      <img src="photo.jpg" class="profile-img" alt="Анна Булавацкая">
-      <h2 class="mt-3">Анна Булавацкая</h2>
-      <p class="text-primary fw-bold">Государственный гражданский служащий</p>
+<div class="container py-4" style="max-width:750px;">
+
+    <div class="card text-center">
+
+        <div class="header-bg"></div>
+
+        <img src="photo.jpg"
+             alt="Булавацкая Анна Алексеевна"
+             class="profile-img mx-auto">
+
+        <div class="px-4 pb-4">
+
+            <h2 class="mt-3 mb-1">
+                Булавацкая Анна Алексеевна
+            </h2>
+
+            <p class="text-primary fw-bold mb-2">
+                Государственный гражданский служащий
+            </p>
+
+            <p class="small text-muted">
+                Делопроизводство • Обращения граждан • Помощник руководителя •
+                Руководитель аппарата • Организационный отдел
+            </p>
+
+            <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+                <span class="badge bg-primary">20 лет стажа</span>
+                <span class="badge bg-success">12 лет госслужбы</span>
+                <span class="badge bg-info text-dark">Юрист</span>
+                <span class="badge bg-secondary">Категория B</span>
+            </div>
+
+            <!-- Контакты -->
+
+            <div class="card border-0 bg-light mb-4">
+                <div class="card-body">
+
+                    <h5 class="mb-3">
+                        <i class="fas fa-address-card text-primary"></i>
+                        Контакты
+                    </h5>
+
+                    <div class="d-grid gap-2">
+
+                        <a href="tel:+79256277718"
+                           class="btn btn-primary">
+                            <i class="fas fa-phone"></i>
+                            Позвонить
+                        </a>
+
+                        <a href="mailto:annalex88@mail.ru"
+                           class="btn btn-outline-primary">
+                            <i class="fas fa-envelope"></i>
+                            Написать на e-mail
+                        </a>
+
+                        <a href="anna-bulavatskaya.vcf"
+                           download
+                           class="btn btn-success">
+                            <i class="fas fa-user-plus"></i>
+                            Добавить контакт в телефон
+                        </a>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="small text-muted text-start">
+
+                        <div>
+                            <strong>Телефон (MAX):</strong>
+                            8 (925) 627-77-18
+                        </div>
+
+                        <div>
+                            <strong>E-mail:</strong>
+                            annalex88@mail.ru
+                        </div>
+
+                        <div>
+                            <strong>Проживание:</strong>
+                            г. Королёв, Московская область
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Аккордеон -->
+
+            <div class="accordion text-start" id="resumeAccordion">
+
+                <!-- Профиль -->
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#profile">
+                            Профессиональный профиль
+                        </button>
+                    </h2>
+
+                    <div id="profile"
+                         class="accordion-collapse collapse show">
+
+                        <div class="accordion-body">
+
+                            <p>
+                                Профессиональный управленец с 12-летним опытом работы
+                                в государственном секторе.
+                            </p>
+
+                            <p>
+                                Специализируюсь на выстраивании стабильных рабочих
+                                процессов в условиях многозадачности и дефицита ресурсов.
+                            </p>
+
+                            <p>
+                                Мой подход — сочетание строгого соблюдения регламентов
+                                с поиском оптимальных решений для команды.
+                            </p>
+
+                            <p>
+                                Обладаю опытом в коммерческом секторе (продажи),
+                                что обеспечивает высокий уровень
+                                клиентоориентированности и ориентации на результат.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Цель -->
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#goal">
+                            Цель
+                        </button>
+                    </h2>
+
+                    <div id="goal"
+                         class="accordion-collapse collapse">
+
+                        <div class="accordion-body">
+
+                            Применение накопленного опыта в новых направлениях
+                            государственной службы либо направлениях,
+                            требующих оптимизации и вывода процессов
+                            на более качественный уровень исполнения.
+
+                            <br><br>
+
+                            Готова к масштабным задачам, требующим системного подхода,
+                            ответственности и энергии.
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Опыт -->
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#experience">
+                            Опыт работы
+                        </button>
+                    </h2>
+
+                    <div id="experience"
+                         class="accordion-collapse collapse">
+
+                        <div class="accordion-body">
+
+                            <h5>
+                                Московско-Окское бассейновое водное управление
+                                Федерального агентства водных ресурсов
+                            </h5>
+
+                            <p>
+                                <strong>Период:</strong>
+                                10.2022 — настоящее время
+                            </p>
+
+                            <p>
+                                <strong>Должность:</strong>
+                                Главный специалист-эксперт отдела государственной
+                                службы, кадров и делопроизводства.
+                            </p>
+
+                            <p><strong>Достижения:</strong></p>
+
+                            <ul>
+                                <li>Разработала нормативную базу и перевела госорган на электронный документооборот.</li>
+                                <li>Существенно сократила просрочки по документам.</li>
+                                <li>С нуля запустила официальный сайт учреждения.</li>
+                                <li>Создала и веду официальную страницу ВКонтакте.</li>
+                                <li>Участвую в координации вопросов IT и информационной безопасности.</li>
+                                <li>Участвую в цифровой трансформации учреждения.</li>
+                                <li>Организую мероприятия различного уровня, включая всероссийские коллегии.</li>
+                                <li>Благодарность руководителя Росводресурсов (2024).</li>
+                                <li>Почетная грамота Минприроды России (2026).</li>
+                            </ul>
+
+                            <hr>
+
+                            <h5>ООО «МЭЙДЖОР-АВТО»</h5>
+
+                            <p>
+                                <strong>Период:</strong>
+                                01.2020 — 07.2022
+                            </p>
+
+                            <p>
+                                <strong>Должность:</strong>
+                                Менеджер отдела продаж.
+                            </p>
+
+                            <ul>
+                                <li>Вошла в ТОП-3 менеджеров по продажам.</li>
+                                <li>Повышена до старшего продавца.</li>
+                                <li>Прошла подготовку на руководителя отдела продаж.</li>
+                                <li>Освоила высокие стандарты клиентского сервиса.</li>
+                                <li>Награждена дипломом лучшего продавца автомобилей за 1 квартал 2022 года.</li>
+                            </ul>
+
+                            <hr>
+
+                            <h5>
+                                Администрация Красноармейского муниципального района
+                                Саратовской области
+                            </h5>
+
+                            <p>
+                                <strong>Период:</strong>
+                                06.2008 — 07.2017
+                            </p>
+
+                            <p>
+                                <strong>Должности:</strong>
+                                ведущий специалист по делам молодежи,
+                                специалист по обращениям граждан,
+                                начальник организационного отдела.
+                            </p>
+
+                            <ul>
+                                <li>Прошла путь от специалиста до начальника отдела.</li>
+                                <li>Выстроила сквозной контроль внутренних процессов администрации.</li>
+                                <li>Успешно организовывала масштабные мероприятия.</li>
+                                <li>Оптимизировала работу с обращениями граждан.</li>
+                                <li>Благодарность главы района (2010).</li>
+                                <li>Почетные грамоты главы района (2014, 2016).</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Квалификация -->
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#courses">
+                            Повышение квалификации
+                        </button>
+                    </h2>
+
+                    <div id="courses"
+                         class="accordion-collapse collapse">
+
+                        <div class="accordion-body">
+
+                            <ul>
+                                <li>Клиентоцентричные коммуникации на государственной гражданской службе (2022)</li>
+                                <li>Информационная безопасность (2023)</li>
+                                <li>Вопросы взаимодействия государственных органов с общественностью и СМИ (2024)</li>
+                                <li>Принципы построения и реализации государственных программ (2024)</li>
+                                <li>Вопросы обеспечения антитеррористической защищенности объектов (2025)</li>
+                                <li>Внедрение клиентоцентричности в профессиональную деятельность ФОИВ (2025)</li>
+                                <li>Организация работы с документами в деятельности органов власти (2025)</li>
+                                <li>Деловой русский язык государственного служащего (2025)</li>
+                                <li>Организация работы с обращениями граждан (2025)</li>
+                                <li>Эффективный помощник руководителя (2026)</li>
+                                <li>Цифровая гигиена (2026)</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Личная информация -->
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#personal">
+                            Личная информация
+                        </button>
+                    </h2>
+
+                    <div id="personal"
+                         class="accordion-collapse collapse">
+
+                        <div class="accordion-body">
+
+                            <p><strong>Гражданство:</strong> Российская Федерация</p>
+                            <p><strong>Место проживания:</strong> г. Королёв, Московская область</p>
+                            <p><strong>Дата рождения:</strong> 11 марта 1988 г.</p>
+                            <p><strong>Возраст:</strong> 38 лет</p>
+                            <p><strong>Семейное положение:</strong> Замужем</p>
+                            <p><strong>Водительские права:</strong> Категория B</p>
+
+                            <hr>
+
+                            <p><strong>Образование:</strong> Высшее</p>
+
+                            <p>
+                                ГОУ ВПО «Саратовская государственная академия права»
+                            </p>
+
+                            <p><strong>Квалификация:</strong> Юрист</p>
+
+                            <p><strong>Год окончания:</strong> 2010</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="d-grid gap-2 mt-4">
+
+                <a href="anna-bulavatskaya.vcf"
+                   download
+                   class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    Скачать контакт
+                </a>
+
+                <button class="btn btn-outline-secondary"
+                        onclick="document.body.classList.toggle('vi-mode')">
+                    <i class="fas fa-eye"></i>
+                    Режим для слабовидящих
+                </button>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="px-4 pb-4">
-      <div class="section-title"><i class="fas fa-briefcase"></i> Опыт работы</div>
-      <div class="exp-item">
-        <strong>Московско-Окское БВУ</strong> <span class="badge-year">10.2022 — н.в.</span>
-        <p class="small text-muted">Главный специалист-эксперт. Электронный документооборот, ИБ, цифровизация, организация всероссийских коллегий.</p>
-      </div>
-      <div class="exp-item">
-        <strong>ООО «МЭЙДЖОР-АВТО»</strong> <span class="badge-year">01.2020 — 07.2022</span>
-        <p class="small text-muted">Менеджер отдела продаж. Клиентский сервис, топ-3 менеджеров.</p>
-      </div>
-      <div class="exp-item">
-        <strong>Администрация района</strong> <span class="badge-year">06.2008 — 07.2017</span>
-        <p class="small text-muted">Начальник орг. отдела. Контроль процессов, обращения граждан.</p>
-      </div>
-
-      <div class="section-title"><i class="fas fa-graduation-cap"></i> Квалификация</div>
-      <p class="small text-muted">Клиентоцентричность, инфобез, госпрограммы, деловой русский язык, цифровая гигиена (курсы 2022-2026 гг.)</p>
-
-      <div class="section-title"><i class="fas fa-phone"></i> Контакты</div>
-      <p><i class="fas fa-phone-alt"></i> 8 (925) 627-77-18</p>
-      <p><i class="fas fa-envelope"></i> annalex88@mail.ru</p>
-
-      <div class="d-grid gap-2 mt-4">
-        <a href="anna-bulavatskaya.vcf" class="btn btn-primary"><i class="fas fa-download"></i> Скачать контакт</a>
-        <button class="btn btn-outline-secondary" onclick="document.body.classList.toggle('vi-mode')">
-          <i class="fas fa-eye"></i> Версия для слабовидящих
-        </button>
-      </div>
-    </div>
-  </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
+```
