@@ -5,18 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Резюме: Булавацкая Анна Алексеевна</title>
   
-  <!-- Локальные пути к ресурсам -->
+  <!-- Подключение стилей -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <style>
     body { font-family: 'Montserrat', sans-serif; background: #f8fafc; color: #1e293b; padding: 20px; }
+    
+    /* Стили для фотографии */
+    .profile-photo {
+      max-width: 150px;
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      border: 4px solid #1d4ed8;
+      margin-bottom: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .card { max-width: 850px; margin: auto; padding: 3rem; border-radius: 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05); background: #fff; }
     h1 { color: #1d4ed8; text-transform: uppercase; font-weight: 700; }
     .section-title { font-size: 1.25rem; font-weight: 600; color: #334155; margin-top: 2rem; border-left: 4px solid #1d4ed8; padding-left: 1rem; margin-bottom: 1rem; }
     .job-item { margin-bottom: 1.5rem; }
     .job-header { font-weight: 600; color: #0f172a; }
     .info-block { display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem; }
+    
+    /* Версия для слабовидящих */
     .visually-impaired { background: #000 !important; color: #fff !important; }
     .visually-impaired .card { background: #111 !important; color: #fff !important; }
     .visually-impaired .section-title { border-left-color: #00ffff; color: #00ffff; }
@@ -26,6 +42,8 @@
 
 <div class="card">
   <header class="text-center mb-4">
+    <!-- Добавлено фото -->
+    <img src="photo.jpg" alt="Булавацкая Анна Алексеевна" class="profile-photo">
     <h1>Булавацкая Анна Алексеевна</h1>
     <p class="lead">Государственный гражданский служащий</p>
   </header>
